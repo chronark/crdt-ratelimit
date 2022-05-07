@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package proto.gossip.v1;
+option go_package = "gossip/v1;gossipv1";
+
+
+service GossipService {
+    // rpc Increment(IncrementRequest) returns (IncrementResponse) {}
+    rpc Merge(MergeRequest) returns (MergeResponse) {}
+    // rpc Ratelimit(RatelimitRequest) returns (RatelimitResponse){}
+}
+
+
+message Int64KV {
+    int64 key = 1;
+    int64 val = 2;
+}
+
+message MergeRequest {
+    bool broadcast = 1;
+
+string    crdt_id = 2;
+repeated Int64KV map = 3;
+
+
+}
+
+message MergeResponse {
+
+}
+
+
+
+message IncrementRequest {
+    bool broadcast = 1;
+    int64 increment = 2;
+}
+
+
+message IncrementResponse {
+}
+
