@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/google/uuid v1.3.0
-	github.com/labstack/echo/v4 v4.7.2
+	github.com/labstack/echo/v4 v4.9.0
 	github.com/rs/zerolog v1.26.1
 	google.golang.org/grpc v1.46.0
 	google.golang.org/protobuf v1.28.0
